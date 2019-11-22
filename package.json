@@ -1,0 +1,19 @@
+{
+  "name": "summaryanswers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cajarty/SAcom.git"
+  },
+  "author": "Jaegar Sarauer <jaegars@hotmail.com> (http://jaegarsarauer.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cajarty/SAcom/issues"
+  },
+  "homepage": "https://github.com/Cajarty/SAcom#readme"
+}
