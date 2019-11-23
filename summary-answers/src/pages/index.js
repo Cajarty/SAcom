@@ -5,26 +5,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const GET_GOOGLE_SEARCH_URL = (searchQuery) => {
-  // Alternative:
-  let request = "http://api.search.yahoo.com/WebSearchService/V1/webSearch?appid=YahooDemo&query=umbrella&results=10";
-  return 'http://www.google.com/search?q=' + searchQuery + '&btnI';
-};
-
-const formatGoogleSearch = (searchText) => {
-  return searchText.replace(' ', '+');
-}
-
-const PRIV_SMMRY_KEY = '';
-const SUMMRY_API_BASE_URL = 'http://api.smmry.com/&SM_API_KEY=' + PRIV_SMMRY_KEY + '&SM_URL=';
-
-const GET_SMMRY_REQUEST_API = (searchText) => {
-  let searchQuery = formatGoogleSearch(searchText);
-  let url = GET_GOOGLE_SEARCH_URL(searchQuery);
-  let summryFullURL = SUMMRY_API_BASE_URL + url;
-  return summryFullURL;
-};
-
+import Summarizer from "../../summarizer";
 
 class Results extends React.Component {
   render() {
@@ -46,7 +27,9 @@ class SearchBar extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.searchValue);
+    Summarizer(this.state.searchValue, (t) => {
+      alert(t);
+    });
     event.preventDefault();
   }
 
