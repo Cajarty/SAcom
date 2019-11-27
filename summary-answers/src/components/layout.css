@@ -712,6 +712,11 @@ pre tt:after {
     width: 100%;
 }
 
+iframe {
+    width: 100%;
+    height: 400px;
+}
+
 .searchBar {
     width: 80%;
 }

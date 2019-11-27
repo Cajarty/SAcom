@@ -9,7 +9,10 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     actions.setWebpackConfig({
       node: {
         fs: 'empty',
-        net : 'empty'
+        net : 'empty',
+        child_process: 'empty',
+        crypto: 'empty',
+        tls: 'empty'
       }
     })
   }
